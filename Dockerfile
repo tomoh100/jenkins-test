@@ -15,7 +15,7 @@
 
 FROM openjdk
 
-RUN apk add --no-cache curl file
+RUN apk add --no-cache file
 
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
