@@ -7,7 +7,7 @@ pipeline {
         APP_NAME = 'java-web-app'
         
         // Docker-specific configuration
-        IMAGE_NAME = "${DOCKER_REGISTRY}/${APP_NAME}:${env.BRANCH_NAME}"
+        IMAGE_NAME = "${APP_NAME}:${env.BRANCH_NAME}"
     }
 
     stages {
@@ -48,7 +48,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    // Optionally push the Docker image to a registry
+                    // Push Docker image to a registry
                     sh "docker push ${env.IMAGE_NAME}"
                 }
             }
