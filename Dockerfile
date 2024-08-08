@@ -19,9 +19,7 @@ RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
 
 RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz \
-    && curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz \
     && echo "Downloaded Tomcat successfully" \
-    && file apache-tomcat-9.0.93.tar.gz \
     && tar xvf apache-tomcat-9.0.93.tar.gz
 
 RUN cp -r apache-tomcat-9.0.93/*  /opt/tomcat/.
