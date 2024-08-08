@@ -15,6 +15,8 @@
 
 FROM openjdk
 
+RUN apt update && apt install -y file curl
+
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
 
