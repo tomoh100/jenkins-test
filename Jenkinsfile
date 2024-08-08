@@ -49,7 +49,9 @@ pipeline {
             steps {
                 script {
                     // Push Docker image to a registry
-                    sh "docker push ${env.IMAGE_NAME}"
+                    // sh "docker push ${env.IMAGE_NAME}"
+                    echo "Docker Hub isn't configured, skipping image push."
+
                 }
             }
         }
