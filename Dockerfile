@@ -19,7 +19,10 @@ RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
 
 # Download and extract Tomcat
+# Download Tomcat and check for successful download
 RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz \
+    && echo "Downloaded Tomcat successfully" \
+    && ls -l apache-tomcat-9.0.64.tar.gz \
     && tar xvf apache-tomcat-9.0.64.tar.gz \
     && rm apache-tomcat-9.0.64.tar.gz
 
