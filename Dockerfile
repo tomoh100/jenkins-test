@@ -15,7 +15,7 @@
 
 FROM openjdk
 
-RUN apt-get update && apt-get install -y file curl
+RUN apk add --no-cache curl file
 
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
