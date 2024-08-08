@@ -13,7 +13,7 @@
 # ENTRYPOINT ["/opt/tomcat/bin/catalina.sh","run"]
 
 
-FROM openjdk:latest
+FROM openjdk
 
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
